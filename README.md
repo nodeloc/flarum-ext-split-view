@@ -4,6 +4,7 @@ A [Flarum](http://flarum.org) extension.
 
 Side-by-side Markdown editor and preview
 
+![demo](docs/chrome-capture-2024-5-16.gif)
 
 ### 📥 Installation
 
