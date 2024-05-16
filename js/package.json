@@ -1,0 +1,14 @@
+{
+  "name": "@nodeloc/flarum-ext-split-view",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "flarum-webpack-config": "^2.0.0",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "scripts": {
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production"
+  }
+}

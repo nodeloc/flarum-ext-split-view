@@ -1,0 +1,86 @@
+.Composer {
+	.Split-view {
+		&.hidden {
+			display: none;
+	   }
+		position: absolute;
+		z-index: 1020;
+		background-color: @body-bg;
+    border-left: 1px dashed @primary-color;
+    overflow: auto;
+    padding-left: 10px;
+   }
+  .Split-view.Post-body {
+    font-size: 16px;
+  }
+  .Split-view.Post-body::after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f0db";
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 30px;
+    opacity: 0.4;
+    z-index: 1020;
+  }
+  /* 滚动槽 */
+  .Split-view.Post-body::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .Split-view.Post-body::-webkit-scrollbar-track {
+    border-radius: 3px;
+    background: @control-bg;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.08);
+  }
+  /* 滚动条滑块 */
+  .Split-view.Post-body::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: @control-color;
+    -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+  }
+}
+
+@media (min-width: 768px) {
+  .fullScreen .Composer-content {
+      max-width: 100% !important;
+  }
+}
+.TextEditor {
+	textarea.hidden {
+		visibility: hidden;
+   }
+   /* 滚动槽 */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    border-radius: 3px;
+    background: @control-bg;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.08);
+  }
+  /* 滚动条滑块 */
+  ::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: @control-color;
+    -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+  }
+}
+@media (prefers-color-scheme: dark) {
+	.Composer {
+		background-color: @body-bg;
+		color: @text-color;
+   }
+}
+@media (max-width: 767px) {
+	.visible.Composer:not(.minimized)::before {
+		opacity: 0;
+   }
+	.visible.Composer:not(.minimized) .item-title {
+		text-align: center;
+   }
+	.item-preview-discussion {
+		padding: 0 0 2px 0 !important;
+   }
+}

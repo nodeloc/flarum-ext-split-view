@@ -1,0 +1,40 @@
+{
+  "name": "nodeloc/flarum-ext-split-view",
+  "description": "Side-by-side Markdown editor and preview",
+  "keywords": [
+    "flarum"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/nodeloc/flarum-ext-split-view",
+    "source": "https://github.com/nodeloc/flarum-ext-split-view/issues",
+    "email": "james@nodeloc.com"
+  },
+  "homepage": "https://www.nodeloc.com",
+  "require": {
+    "flarum/core": "^1.7"
+  },
+  "authors": [
+    {
+      "name": "James",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "nodeloc\\SplitView\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Split View",
+      "category": "feature",
+      "icon": {
+        "name": "fas fa-columns",
+        "backgroundColor": "#ddd",
+        "color": "#000"
+      }
+    }
+  }
+}
