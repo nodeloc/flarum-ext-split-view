@@ -65,6 +65,8 @@ app.initializers.add('nodeloc-split-view', () => {
 
 	extend(ComposerBody.prototype, 'oncreate', function () {
 		this.composerPositionInterval = setInterval(function () {
+			const $editorContainer = $(".TextEditor-editorContainer");
+			let $composer = this.$('.ComposerPage');
 			if (app.composer.position !== "normal") {
 				if (app.current?.data?.routeName !== "composer") {
 					$composer.css("padding-bottom", '');
@@ -72,8 +74,6 @@ app.initializers.add('nodeloc-split-view', () => {
 					return;
 				}
 			}
-			const $editorContainer = $(".TextEditor-editorContainer");
-			let $composer = this.$('.ComposerPage');
 			if (!$composer.length)
 				$composer = this.$('.Composer');
 			if (app.composer.isSplitView) {
