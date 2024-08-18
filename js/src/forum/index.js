@@ -66,8 +66,11 @@ app.initializers.add('nodeloc-split-view', () => {
 	extend(ComposerBody.prototype, 'oncreate', function () {
 		this.composerPositionInterval = setInterval(function () {
 			if (app.composer.position !== "normal") {
-				if (app.current?.data?.routeName !== "composer")
+				if (app.current?.data?.routeName !== "composer") {
+					$composer.css("padding-bottom", '');
+					$editorContainer.css("padding-bottom", '');
 					return;
+				}
 			}
 			const $editorContainer = $(".TextEditor-editorContainer");
 			let $composer = this.$('.ComposerPage');
