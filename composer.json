@@ -19,6 +19,11 @@
     {
       "name": "James",
       "role": "Developer"
+    },
+    {
+      "name": "小鱼飘飘",
+      "role": "Developer",
+      "email": "z@xypp.cc"
     }
   ],
   "autoload": {

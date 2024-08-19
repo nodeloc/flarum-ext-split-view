@@ -90,7 +90,8 @@ app.initializers.add('nodeloc-split-view', () => {
 					const screenHeight = window.innerHeight;
 					if (app.screen() === "phone") {
 						const composerHeight = $(".ComposerBody").height();
-						const composerPaddingBottom = parseInt(($editorContainer.css("padding-bottom") || "0px").substring(0, -2)) || 0;
+						const composerPaddingBottomCss = ($editorContainer.css("padding-bottom") || "0px");
+						const composerPaddingBottom = parseInt(composerPaddingBottomCss.substring(0, composerPaddingBottomCss.length - 2)) || 0;
 						if (screenHeight - textareaHeight - composerHeight + composerPaddingBottom > 0) {
 							mode = "vertical";
 						}
